@@ -6,14 +6,12 @@ import plotly.graph_objs as go
 ########### Define your variables
 beers=['Patrick', 'Brian', 'Kristina', 'Wendy']
 ibu_values=[25, 60, 85, 75]
-abv_values=[5.4, 7.1, 9.2, 4.3]
 color1='lightblue'
 color2='darkgreen'
 mytitle='Hourly Production'
 tabtitle='beer!'
 myheading='Processing'
 label1='OPH'
-label2='ABV'
 githublink='https://github.com/austinlasseter/flying-dog-beers'
 sourceurl='https://www.flyingdog.com/beers/'
 
@@ -23,12 +21,6 @@ bitterness = go.Bar(
     y=ibu_values,
     name=label1,
     marker={'color':color1}
-)
-alcohol = go.Bar(
-    x=beers,
-    y=abv_values,
-    name=label2,
-    marker={'color':color2}
 )
 
 beer_data = [bitterness, alcohol]
